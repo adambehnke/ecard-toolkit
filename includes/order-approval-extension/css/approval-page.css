@@ -1,0 +1,250 @@
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.panel {
+    width:45%;
+}
+.headingnew {
+    background-color: #f6f6f6;
+}
+.headingnew h4{
+    margin-left: 2%;
+    font-weight: 500;
+}
+.sorting h3 {
+    color: #d25a5a;
+    font-size: 27px;
+    font-weight: 600;
+}
+.sectionnew, .approval-page-left {
+    float: left;
+    width: 59%;
+}
+.sectionnewright, .approval-page-right {
+    float: right;
+    width: 41%;
+}
+.sorting p {
+    color: #000;
+    font-size: 19px;
+    font-weight: 600;
+}
+.sorting img {
+    margin-bottom: 5%;
+}
+.special p {
+    font-size: 22px;
+    color: #31a2e2;
+    font-weight: 500;
+}
+.specialnew h3 {
+    font-size: 22px;
+    color: #31a2e2;
+    font-weight: 500;
+}
+.specialnew span {
+    color: #191717;
+    font-size: 16px;
+}
+.sortingnew h3 {
+    color: #525252;
+    font-weight: 500;
+    font-size: 22px;
+}
+.sortingnew span {
+    color:#d25a5a;
+}
+.review {
+    background-color: #f6f6f6;
+    text-align: justify;
+    padding: 4%;
+}
+.review h4 {
+    background-color: #DAE7EE;
+    color: #829BE5;
+    font-weight: 500;
+    padding: 2%;
+    border: 1px solid;
+    padding: 4px;
+}
+.approval-page button, .approval-page .btn {
+    background-image: linear-gradient(to top, #439a1b 0%, #6da252 51%, #d8f3cc 100%);
+    border-radius: 26px;
+    color: #fff;
+    padding: 1%;
+    width: 100%;
+    margin-top: 26px;
+    margin-bottom: 12px;
+    transition: all .3s ease-in-out;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #579d30;
+    font-weight: bold;
+}
+.approval-page .btn:visible {
+    color: #fff;
+}
+.approval-page button:hover, .approval-page .btn:hover {
+    background-position: right center;
+    text-decoration: none;
+}
+.approval-page button[disabled] {
+    background-image: linear-gradient(to top, #777777 0%, #888888 51%, #dcdcdc 100%);
+    border-color: #3f3f3f;
+}
+
+#primary .content-area {
+    width: 100%;
+}
+
+/* Approval Page */
+.approval-page-left .disclaimer {
+    margin-bottom: 60px;
+}
+
+/* Approval Proof Larger Version */
+.approval-page-left .approval-proof-larger-version {
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    top: -5px;
+}
+
+/* Edit Section */
+.edit-section h3 {
+    line-height: 1em;
+    margin-bottom: 2px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.edit-section h3 + p {
+    margin-bottom: 1.3em;
+    max-width: 100%;
+}
+
+.edit-section textarea {
+    width: calc(100% - 22px);
+    max-width: 100%;
+    border-color: #c6cbd0;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    margin-left: 22px;
+    display: none;
+}
+
+/*  Approval & Edit Controls */
+.approval-controls img {
+    margin-bottom: 20px;
+}
+
+.approval-controls .proof-notice-mobile {
+    display: none;
+}
+
+.approval-controls label {
+    font-size: 18px;
+    line-height: 1.7em;
+}
+
+.approval-controls .disclaimer {
+    color: red;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.1em;
+}
+
+.edit-controls {
+    margin-bottom: 20px;
+}
+
+.edit-controls > div {
+    margin-bottom: 4px;
+}
+
+.edit-controls span {
+    display: block;
+}
+
+.edit-controls .edit-controls-big-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #0983cd;
+}
+
+.edit-controls .edit-controls-description {
+    font-style: italic;
+    font-size: 13px;
+    padding-left: 22px;
+    margin-top: 2px;
+    color: #636466;
+}
+
+.edit-controls label input[type="checkbox"] {
+    float: left;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .approval-page-left {
+        padding-right: 50px;
+    }
+}
+
+@media (max-width:767px) {
+    #primary .content-area .sectionnew, #primary .content-area .approval-page-left, 
+    #primary .content-area .sectionnewright, #primary .content-area .approval-page-right {
+        display: block; 
+        width: 100%;
+        overflow: hidden;
+        clear: both;
+        
+    }
+    #primary .content-area .sectionnewright, #primary .content-area .approval-page-right {
+        float: left;
+    }
+
+    .edit-section h3 + p {
+        max-width: 100%;
+    }
+
+    .approval-page button, .approval-page .btn {
+        height: 40px;
+    }
+
+    .approval-page button.submit_changes, .approval-page .btn.submit_changes {
+        margin-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .approval-controls .proof-notice {
+        display: none;
+    }
+
+    .approval-controls .proof-notice-mobile {
+        display: block;
+    }
+}

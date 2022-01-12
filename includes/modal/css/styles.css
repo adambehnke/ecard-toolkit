@@ -1,0 +1,171 @@
+.modal-buttons .confirm {
+    background: #00669b;
+    border-color: #00669b;
+}
+
+.modal-ecard {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(50,50,50,0.8);
+    z-index: 100000;
+}
+
+.modal-ecard .modal-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-ecard .modal-box-container {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 750px;
+    width: 95%;
+    min-height: 300px;
+    padding: 40px 65px;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-ecard .modal-header {
+    border: none;
+}
+
+.modal-ecard .modal-content {
+    box-shadow: none;
+    border: none;
+}
+
+.modal-ecard h2 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4em;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.modal-ecard p, .modal-ecard li {
+    font-size: 16px;
+    line-height: 1.4em;
+    position: relative;
+}
+
+.modal-ecard li {
+    padding-left: 57px;
+}
+
+.modal-confirmation li:before {
+    content: "\2192";
+    position: absolute;
+    left: 20px;
+    top: -2px;
+    margin-right: 10px;
+    font-size: 21px;
+    color: #00669b;
+}
+
+.modal-confirmation.has-items-to-delete li:before {
+    color: #ba0000;
+    content: "\2715";
+    top: 0px;
+    left: 25px;
+}
+
+.modal-ecard > .close-modal {
+    position: absolute;
+    right: 34px;
+    top: 38px;
+    font-size: 55px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-ecard > .close-modal:hover {
+    opacity: 0.8;
+}
+
+.modal-ecard .modal-buttons {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.modal-ecard .modal-buttons > span {
+    margin: 0 5px;
+    padding: 10px 20px;
+    color: #2071a0;
+    border: 1px solid #2071a0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.modal-ecard .modal-buttons > .confirm {
+    background: #007cba;
+    border-color: #007cba;
+    color: #fff;
+}
+
+.modal-ecard .modal-buttons > .confirm:hover {
+    background: #00669b;
+    border-color: #00669b;
+}
+
+.modal-ecard.has-status-animation .status-animation {
+    display: none;
+    text-align: center;
+    font-size: 35px;
+}
+
+.modal-ecard.has-status-animation.processing .status-animation {
+    display: block;
+}
+
+.modal-ecard.has-status-animation.processing .modal-header, 
+.modal-ecard.has-status-animation.processing .modal-content,
+.modal-ecard.has-status-animation.processing .modal-buttons {
+    display: none;
+}
+
+.modal-ecard .status-animation .icon-spinner {
+    animation: rotation 2s infinite linear;
+}
+
+.modal-ecard .status-animation .fa-check {
+    color: #398439;
+    font-size: 42px;
+}
+
+.modal-ecard .status-animation-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+    .modal-ecard .modal-box-container {
+        max-width: 450px;
+        padding: 40px 30px;
+    }
+}
+
+@keyframes rotation {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(359deg); }
+}

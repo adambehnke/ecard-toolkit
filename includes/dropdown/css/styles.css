@@ -1,0 +1,7 @@
+.related-option {
+    display: none;
+}
+
+.related-option.open {
+    display: block;
+}

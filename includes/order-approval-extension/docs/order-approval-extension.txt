@@ -1,0 +1,55 @@
+
+
+MIGRATION STEPS
+    (S) (D) theme/includes/init.php
+    (S) (D) theme/header.php
+    (S) (D) theme/footer.php
+    (S) (D) (P) upload the extension folder in the theme includes
+    (S) (D) (P) Page-add-products.php template
+
+    (S) (D) (P) Add the 'add-products' page.
+        add shortcode: [checkout_add_products]
+        select the Add products (checkout) template
+        (?)select parent page Checkout
+        SEO - remove indexing
+
+    (S) (P) OM/templates/snap shot
+        the new keys need to be removed
+
+    (S) (D) Modify the class-order-management.php
+        if ($wc_order_status === 'processing' || $wc_order_status === 'on-hold') {
+            insert_event_log($order_id, 'Approved Proofs', 1, $current_status, 'Approved Proofs', 'Orders');
+            echo get_site_url() . '/thankyou-page?success=proof';
+        } elseif ($wc_order_status === 'pending') {
+            echo $checkout_url . '?flow=order-approval&order=' . $order_id;
+        } else {
+            echo get_site_url() . '/thankyou-page?success=error';
+        }
+
+        add_existing_order_cart -> static function and static call a few functions above
+
+    (S) (?) Order_Management class
+        static function add_order_items_to_cart()
+
+        Order_Item_Rush_Fee
+
+        Order_Item_Fee
+
+    (S) (D) (P) Update plugins/partner/.../product.js
+    (S) (D) (P) plugins/partner/includes/Flat_Currency class
+    (S) (P) plugins/partner/index.php
+
+    (S) (D) woocommerce/checkout/form-pay.php
+    (S) (D) (P) woocommerce/checkout/form-checkout.php
+        <input type="hidden" name="existing_order_id" value="<?php echo filter_var($_GET['order'], FILTER_SANITIZE_NUMBER_INT); ?>" />
+
+    () (D) woocommerce/checkout/review-order.php
+
+    (S) (D) upload OM/includes/ Order_key_Converter class
+
+    (S) (D) OM/order-management.php
+
+    (S) (D) add the order review categories widget
+
+    STAGE
+    1012231

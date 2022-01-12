@@ -1,0 +1,141 @@
+.wc-order-add-item .add-order-shipping, .shipping.shipping-added .name .view,
+#order_shipping_line_items .shipping-custom .shipping_methods,
+.shipping .shipping-options, .shipping.shipping-added .name .edit input.shipping_method_name,
+#order_shipping_line_items .shipping.shipping-selected-no-additional .shipping-options {
+    display: none;
+}
+
+.shipping.shipping-added .name .edit {
+    display: block !important;
+}
+
+#order_shipping_line_items .shipping {
+    position: relative;
+}
+
+#order_shipping_line_items .shipping.shipping-added .shipping-options,
+#order_shipping_line_items .shipping.dropdown-row-edit .shipping-options {
+    width: 100%;
+}
+
+#order_shipping_line_items .wc-order-edit-line-item {
+    margin-left: 10px;
+}
+
+/*
+#order_shipping_line_items .wc-order-edit-line-item,
+#order_shipping_line_items .wc-order-edit-line-item-shipping-actions {
+    padding: 19px 0 !important;
+    max-width: 25px !important;
+    display: inline-block;
+}
+
+#order_shipping_line_items .wc-order-edit-line-item-actions {
+    width: 20px !important;
+}
+
+*/
+
+#order_shipping_line_items .wc-order-edit-line-item-shipping-actions {
+    position: absolute;
+    right: 90px;
+    opacity: 0;
+    border-top: none !important;
+    border-bottom: none !important;
+    height: 100%;
+}
+
+#order_shipping_line_items .wc-order-edit-line-item-shipping-actions:hover {
+    opacity: 1;
+}
+
+#order_shipping_line_items .wc-order-edit-line-item-actions a.delete-order-item-shipping,
+#order_shipping_line_items .wc-order-edit-line-item-shipping-actions a.delete-order-item-shipping {
+    margin: 0 0 0 8px;
+    color: #ccc;
+}
+
+#order_shipping_line_items .wc-order-edit-line-item-shipping-actions a.delete-order-item-shipping:hover {
+    color: #a00;
+}
+
+#order_shipping_line_items .wc-order-edit-line-item-actions a.delete-order-item-shipping:before,
+#order_shipping_line_items .wc-order-edit-line-item-shipping-actions a.delete-order-item-shipping:before {
+    font-family: Dashicons;
+    speak: never;
+    font-weight: 400;
+    font-variant: normal;
+    font-size: 16px;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-indent: 0;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    content: "";
+    position: relative;
+}
+
+.shipping.shipping-selected-fedex select.shipping-options,
+.shipping.dropdown-row-edit .shipping-options {
+    display: block;
+}
+
+.shipping .name.loading .loading-container {
+   display: block;
+}
+
+.shipping .loading-container {
+    text-align: center;
+    padding: 10px;
+    display: none;
+    transition: .3s all ease-in-out;
+    color: #ccc;
+}
+
+.shipping .loading-text {
+    font-size: 13px;
+    margin-left: 10px;
+    color: #aaa;
+} 
+
+.shipping .icon-spinner {
+    text-align: center;
+    font-size: 15px;
+    animation: rotation 2.5s infinite linear;
+}
+
+#woocommerce-order-items button.save-action {
+    display: none;
+}
+
+#woocommerce-order-items button.save-action-custom {
+    float: right;
+    background: #007cba;
+    border-color: #007cba;
+    color: #fff;
+}
+
+#woocommerce-order-items button.save-action-custom:hover {
+    background: #00669b;
+    border-color: #00669b;
+}
+
+.modal-shipping-confirmation .modal-box-container {
+    max-width: 650px;
+}
+
+.modal-shipping-confirmation .shipping-items-to-delete {
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+@keyframes rotation {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(359deg); }
+}

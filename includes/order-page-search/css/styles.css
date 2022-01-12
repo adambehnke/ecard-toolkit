@@ -1,0 +1,106 @@
+.order-search-box input[name="order_search"] {
+    width: 100%;
+}
+
+.order-search-box button {
+    background: #007cba;
+    border-color: #007cba;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 6px 20px;
+    margin-top: 10px;
+    max-width: 120px;
+    transition: all .3s ease-in-out;
+}
+
+.order-search-box button:hover {
+    background-color:#333;
+}
+
+.order-search-box button[disabled], .order-search-box button[disabled]:hover {
+    background-color: #bbb;
+}
+
+.order-search-box button .icon-spinner {
+    animation: rotation 3s infinite linear;
+    font-size: 13px;
+    margin-right: 5px;
+    display: none;
+}
+
+.order-search-box button.active .icon-spinner {
+    display: inline-block;
+}
+
+.searching-animation {
+    text-align: center;
+    padding-top: 23vh;
+    background-color: white;
+    height: 100vh;
+    z-index: 100;
+}
+
+.searching-animation .icon-spinner, .searching-animation .icon-search {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.searching-animation .icon-spinner {
+    animation: rotationPulse 2s infinite linear;
+}
+
+.searching-animation .icon-search {
+    animation: pulse 1.6s infinite linear;
+    transform-origin: bottom center;
+}
+
+.searching-animation .searching-text {
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+}
+
+.searching-animation .search-term {
+    color: #007cba;
+    font-weight: 600;
+    text-transform: none;
+    font-size: 22px;
+    display: block;
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(359deg); }
+}
+
+@keyframes rotationPulse {
+    0% { transform: rotate(0deg); opacity: 1; }
+    25% { transform: rotate(90deg); opacity: .7; }
+    50% { transform: rotate(180deg); opacity: 1; }
+    75% { transform: rotate(270deg); opacity: .7; }
+    100% { transform: rotate(359deg); opacity: 1; }
+}
+
+@keyframes searching {
+    0% { transform: translateX(-40px) scale(.92); opacity: 0; }
+    25% { transform: translateX(-20px) scale(.96); }
+    50% { transform: translateX(0) scale(1); opacity: 1; }
+    75% { transform: translateX(20px) scale(.96); }
+    100% { transform: translateX(40px) scale(.92); opacity: 0; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(.91); opacity: 0; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(.91); opacity: 0; }
+}

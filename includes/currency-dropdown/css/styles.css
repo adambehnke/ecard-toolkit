@@ -1,0 +1,17 @@
+.modal-currency-confirmation .delete-items-text,
+.modal-currency-confirmation .items-to-delete {
+    display: none;
+}
+
+.modal-currency-confirmation.has-items-to-delete .delete-items-text {
+    display: inline-block;
+}
+
+.modal-currency-confirmation.has-items-to-delete .items-to-delete {
+    display: block;
+}
+
+.modal-currency-confirmation.has-items-to-delete h3 {
+    margin-top: 0px;
+    font-size: 16px;
+}

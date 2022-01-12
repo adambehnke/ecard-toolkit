@@ -1,0 +1,38 @@
+.wp-admin .woocommerce_order_data {
+    position: relative;
+}
+
+.order-address-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);    
+    display: none;
+}
+
+.order-address-overlay-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.order-address-overlay .icon-spinner {
+    animation: rotation 3s infinite linear;
+    font-size: 30px;
+}
+
+.order-address-overlay span {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 7px;
+}
+
+@keyframes rotation {
+    from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    to { -webkit-transform: rotate(359deg); transform: rotate(359deg); }
+}
